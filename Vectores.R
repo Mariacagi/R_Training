@@ -114,7 +114,7 @@ reverse_vector <- function(vec_01) {
 
 reverse_vector(c(10,20, 5))
 
-# 23 - Write a R program to convert two columns of a data frame to a named vector. (NO FUNCIONA)
+# 23 - Write a R program to convert two columns of a data frame to a named vector.
 
 df_insectos = data.frame(ABREVIATURA = c("M","H","S","L"), 
                 TIPO = c("Mariposa", "Hormiga", "Saltamontes", "Libelula")
@@ -123,7 +123,7 @@ df_insectos = data.frame(ABREVIATURA = c("M","H","S","L"),
 df_insectos
 
 convert_vector <- function(df, col1, col2) {
-  test_01 <- setNames(as.character(df$col1), df$col2)
+test_01 <- setNames(as.character(df[[col1]]), df[[col2]])
   
   return(test_01)
 }

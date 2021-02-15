@@ -81,3 +81,51 @@ second_element <- function(vec_01) {
 }
 
 second_element(c(10,20, 5))
+
+
+# 14 - Write a R program to find nth highest value in a given vector.
+
+highest_element <- function(vec_01, x) {
+  test_01 <- sort(vec_01, decreasing = TRUE)[x]
+  
+  return(test_01)
+}
+
+highest_element(c(10,20, 5), 3)
+
+
+# 16 - Write a R program to convert given dataframe column(s) to a vector. (NO FUNCIONA)
+
+convert_dataframe <- function(data_cols_01, data_cols_02) {
+  dataframe_01 <- data.frame(col1=head(data_cols_01, n=1):tail(data_cols_01, n=1), col2=head(data_cols_02, n=1):tail(data_cols_02, n=1))
+  
+  return(dataframe_01)
+}
+
+convert_dataframe(c(10,20, 5), c(5, 20, 15))
+
+# 20 - Write a R program to reverse the order of given vector.
+
+reverse_vector <- function(vec_01) {
+  test_01 <- rev(vec_01)
+  
+  return(test_01)
+}
+
+reverse_vector(c(10,20, 5))
+
+# 23 - Write a R program to convert two columns of a data frame to a named vector. (NO FUNCIONA)
+
+df_insectos = data.frame(ABREVIATURA = c("M","H","S","L"), 
+                TIPO = c("Mariposa", "Hormiga", "Saltamontes", "Libelula")
+)
+
+df_insectos
+
+convert_vector <- function(df, col1, col2) {
+  test_01 <- setNames(as.character(df$col1), df$col2)
+  
+  return(test_01)
+}
+
+convert_vector(df = df_insectos, col1 = "ABREVIATURA", col2 = "TIPO")

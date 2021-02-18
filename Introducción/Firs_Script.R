@@ -16,3 +16,9 @@ plot(x = mtcars$wt, y = mtcars$mpg)
 
 library("magrittr")
 ?tidyverse
+
+install.packages("logging")
+install.packages("XML")
+install.packages("xgboost")
+install.packages("dummies")
+install.packages("data.table")
